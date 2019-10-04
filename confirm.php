@@ -68,10 +68,10 @@ EOM;
 		$header = "From: " .mb_encode_mimeheader($fromName) ."<{$fromEmail}>";
 
 		// メール送信を行う
-		mb_send_mail($email, $subject, $body, $header);
+		//mb_send_mail($email, $subject, $body, $header);
 
  		// サンクスページに画面遷移させる
-		header("Location: http://testapp.hippy.jp/contact/thanks.php");
+	    //header("Location: thanks.php");
 		exit;
 	}
 ?>
@@ -129,5 +129,8 @@ EOM;
 		<button type="submit" name="submit">送信する</button>
 	</form>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="./webFormSubmitted.js"></script>
 </body>
 </html>
